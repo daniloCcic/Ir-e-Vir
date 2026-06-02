@@ -1,9 +1,15 @@
-import sys
 from collections import deque
 
 def solve():
-    # Lê toda a entrada de uma vez
-    input_data = sys.stdin.read().split()
+    # Lê toda a entrada acumulando os valores através do input()
+    input_data = []
+    while True:
+        try:
+            line = input()
+            input_data.extend(line.split())
+        except EOFError:
+            break
+            
     if not input_data:
         return
         
